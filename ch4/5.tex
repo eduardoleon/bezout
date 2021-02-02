@@ -1,0 +1,33 @@
+\section{Completación}
+
+\noindent En esta sección discutiremos de manera informal la completación de un anillo local, enfatizando la intuición geométrica antes que el formalismo algebraico. El lector puede consultar los detalles técnicos en \cite[pp. 100-123]{atiyah} y \cite[pp. 33-35, 207-216]{hartshorne}.
+
+Dado un anillo local $R = \O_p(V)$, las potencias $\m^n \subset R$ del ideal maximal están conformadas por las funciones racionales $f : V \to k$ que se anulan en $p$ con orden por lo menos $n$. Entonces el anillo cociente $R/\m^n$ contiene la información infinitesimal de $R$ de orden menor que $n$.
+
+Consideremos el sistema inverso de anillos
+$$
+\begin{tikzcd}
+      \dots               \arrow[r]
+    & \dfrac R {\m^{n+1}} \arrow[r]
+    & \dfrac R {\m^n}     \arrow[r]
+    & \dfrac R {\m^{n-1}} \arrow[r]
+    & \dots               \arrow[r]
+    & \dfrac R {\m^2}     \arrow[r]
+    & \dfrac R \m         \arrow[r]
+    & 0
+\end{tikzcd}
+$$
+
+Los morfismos de este diagrama describen la pérdida de información geométrica al cocientar por una potencia cada vez menor de $\m$. En particular,
+
+\begin{itemize}
+    \item Cuando $n = 0$, hemos perdido toda la información, incluida la finita (i.e., de orden $0$). Por ende, sólo nos queda el anillo trivial $R/\m^0 = 0$, que describe al conjunto vacío.
+    
+    \item Cuando $n = 1$, hemos perdido la información infinitesimal. Por ende, el cuerpo de residuos $k = R/\m$ describe al punto $p$, extraído limpiamente de la variedad $V$.
+    
+    \item Cuando $n = 2$, hemos perdido la información infinitesimal de orden $2$ y superior. Por ende, el ideal maximal $T_p^\star V = \m/\m^2$ es el \textit{espacio cotangente de Zariski} de $p \in V$.
+    
+    \item Cuando $n \to \infty$, el límite inverso del sistema de anillos retiene la información infinitesimal de $R$ de todos los órdenes. Este límite inverso es llamado la \textit{completación} de $R$ y se denota por $\widehat R$. El objeto geométrico descrito por $\widehat R$ es la \textit{vecindad infinitesimal} $U$ de $p \in V$.
+\end{itemize}
+
+Bajo condiciones razonables \cite[p. 110]{atiyah}, el homomorfismo de anillos inducido $\varphi : R \to \widehat R$ es inyectivo. Sin embargo, en general, $\varphi$ no es sobreyectivo. Geométricamente, esto significa que no toda ``función regular'' $f : U \to k$ puede ser extendida a una vecindad finita de $U$.

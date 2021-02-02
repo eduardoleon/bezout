@@ -1,0 +1,39 @@
+\section{Definiciones básicas}
+
+\begin{preliminaries}
+Sean $R$ un anillo noetheriano y $M$ un $R$-módulo finitamente generado.
+\end{preliminaries}
+
+\begin{definition}
+Una \textit{cadena de primos} en $R$ es una lista finita y estrictamente ascendente
+$$\p_0 \subsetneq \p_1 \subsetneq \dots \subsetneq \p_n$$
+de ideales primos de $R$. Decimos que esta cadena tiene \textit{longitud} $n$ y \textit{termina} en $\p_n$.
+\end{definition}
+
+\begin{definition}
+La \textit{altura} de un ideal primo $\p \subset R$, denotada $h(\p)$, es el supremo de las longitudes de las cadenas de primos que terminan en $\p$.
+\end{definition}
+
+\begin{definition}
+La \textit{altura} de un ideal propio $\a \subset R$, denotada $h(\a)$, es la altura mínima de cualquier ideal primo intermedio $\a \subset \p \subset R$.
+\end{definition}
+
+\begin{remark}
+En particular, si $R = k[Y]$, entonces $h(\a) = \codim V(\a)$.
+\end{remark}
+
+\begin{definition}
+La \textit{dimensión de Krull} de $R$ es el supremo de las alturas de sus ideales propios.
+\end{definition}
+
+\begin{remark}
+En particular, si $R = k[Y]$, entonces $\dim R = \dim Y$.
+\end{remark}
+
+\begin{definition}
+La \textit{dimensión de Krull} de $M$ es la dimensión de Krull de $R / \Ann(M)$.
+\end{definition}
+
+\begin{remark}
+En particular, si $R = k[Y]$, entonces $\dim M = \dim S(M)$.
+\end{remark}

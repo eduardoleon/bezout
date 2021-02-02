@@ -1,0 +1,45 @@
+\section{Conjuntos algebraicos afines}
+
+\begin{definition}
+El \textit{espacio afín} de dimensión $n \in \N$, denotado $\A^n$, es el conjunto de tuplas $(a_1 \dots a_n)$ conformadas por elementos de $k$. Para enfatizar que $\A^n$ es un objeto geométrico, llamamos \textit{puntos} a las tuplas $(a_1 \dots a_n)$ y llamamos \textit{coordenadas} a las componentes $a_i$.
+\end{definition}
+
+\begin{definition}
+Las \textit{funciones coordenadas} de $\A^n$ son las funciones $x_i : \A^n \to k$ que asignan a cada punto de $\A^n$ su $i$-ésima coordenada. Una \textit{función regular} sobre $\A^n$ es una función $f : \A^n \to k$ que se puede expresar como polinomio en $x_1 \dots x_n$. El \textit{anillo de coordenadas} de $\A^n$, denotado $k[\A^n]$, está conformado por las funciones regulares $f : \A^n \to k$.
+\end{definition}
+
+\begin{definition}
+Sea $F \subset k[\A^n]$ una familia de funciones regulares. Decimos que el punto $p \in \A^n$ es un \textit{cero} de $F$ si $f(p) = 0$ para todo $f \in F$. El \textit{conjunto algebraico afín} de $F$, denotado $V(F)$, es el conjunto de ceros de $F$ en $\A^n$.
+\end{definition}
+
+\begin{remark}
+Si $\a \subset k[\A^n]$ es el ideal generado por $F$, entonces $V(\a) = V(F)$.
+\end{remark}
+
+\begin{example}
+La \textit{cúspide cúbica} $V(x^3 - y^2) \subset \A^2$ es una curva afín plana.
+\end{example}
+
+\begin{example}
+La \textit{cúbica torcida} $V(y - x^2, z - x^3) \subset \A^3$ es un curva afín no plana.
+\end{example}
+
+\begin{definition}
+Sea $X \subset \A^n$ un conjunto de puntos. Decimos que una función regular $f : \A^n \to k$ se \textit{anula} en $X$ si $f(p) = 0$ para todo $p \in X$. El ideal de $X$, denotado $I(X)$, está conformado por las funciones regulares que se anulan en $X$.
+\end{definition}
+
+\begin{remark}
+Por construcción, $I(X)$ es un ideal radical de $k[\A^n]$.
+\end{remark}
+
+\begin{theorem}
+(Teorema de la base de Hilbert) Sea $R$ un anillo noetheriano. Entonces el anillo de polinomios $R[x]$ también es noetheriano.
+\end{theorem}
+
+\begin{proof}
+Ver \cite[pp. 13-14]{fulton}.
+\end{proof}
+
+\begin{corollary}
+El anillo de coordenadas $k[\A^n]$ es noetheriano. Por ende, todo conjunto algebraico es la interseccción de un número finito de hipersuperficies. \qed
+\end{corollary}

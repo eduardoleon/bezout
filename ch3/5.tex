@@ -1,0 +1,101 @@
+\section{Primos minimales}
+
+\noindent La referencia para esta sección es \cite[pp. 50-51]{hartshorne}. Todos los resultados de esta sección siguen siendo válidos si eliminamos las palabras ``graduado'' y ``homogéneo'' de las proposiciones y sus demostraciones. En particular, en \cite[pp. 91, 93]{eisenbud} se demuestran análogos no graduados de las proposiciones 3.11 y 3.13.
+
+\begin{preliminaries}
+Sean $R$ un anillo graduado noetheriano y $M$ un $R$-módulo graduado finitamente generado como en las secciones 3.2 y 3.4.
+\end{preliminaries}
+
+\begin{definition}
+El \textit{anulador} de $M$, denotado $\Ann(M)$, es el conjunto de elementos $x \in R$ tales que $xm = 0$ para todo $m \in M$. Si $M$ es un módulo principal generado por $m \in M$, también podemos escribir $\Ann(m) = \Ann(M)$.
+\end{definition}
+
+\begin{remark}
+$\Ann(M)$ es un ideal homogéneo de $R$.
+\end{remark}
+
+\begin{definition}
+Un \textit{primo homogéneo asociado} de $M$ es un ideal primo homogéneo $\p \subset R$ que es de la forma $\p = \Ann(m)$ para algún elemento homogéneo $m \in M$.
+\end{definition}
+
+\begin{remark}
+El módulo trivial no tiene primos asociados, porque $\Ann(0) = R$.
+\end{remark}
+
+\begin{proposition}
+Supongamos que la sucesión
+$$
+\begin{tikzcd}
+    0 \arrow[r] & L \arrow[r, "f"] & M \arrow[r, "g"] & N \arrow[r] & 0
+\end{tikzcd}
+$$
+es exacta. Entonces $\Ann(L) \cdot \Ann(N) \subset \Ann(M) \subset \Ann(L) \cap \Ann(N)$. Además, si $\q \subset R$ es un ideal primo homogéneo, entonces $\q \supset \Ann(M)$ si y sólo si $\q \supset \Ann(L)$ o $\q \supset \Ann(N)$.
+\end{proposition}
+
+\begin{proof}
+Puesto que $\Ann(N) \cdot N = 0$, entonces $\Ann(N) \cdot M \subset f(L)$. Puesto que $\Ann(L) \cdot L = 0$, entonces $\Ann(L) \cdot \Ann(N) \cdot M = 0$. Esto establece la cota inferior para $\Ann(M)$. Por el lema de evitación de primos, si $\q \not \supset \Ann(L)$ y $\q \not \supset \Ann(N)$, entonces $\q \not \supset \Ann(L) \cdot \Ann(N)$ y, usando la transitividad de la inclusión, $\q \not \supset \Ann(M)$.
+
+Puesto que $f$ es inyectiva, $\Ann(M) \cdot f(L) = 0$ implica que $\Ann(M) \cdot L = 0$. Puesto que $g$ es sobreyectiva, $\Ann(M) \cdot g(M) = 0$ implica que $\Ann(M) \cdot N = 0$. Combinando los dos resultados, tenemos la cota superior para $\Ann(M)$. Usando la transitividad de la inclusión, cualquiera entre $\q \supset \Ann(L)$ y $\q \supset \Ann(N)$ implica $\q \supset \Ann(M)$.
+\end{proof}
+
+\begin{proposition}
+Si $M$ es no trivial, entonces tiene primos homogéneos asociados.
+\end{proposition}
+
+\begin{proof}
+Consideremos la familia de ideales homogéneos que son de la forma $\Ann(m)$ para algún elemento homogéneo $m \in M$ distinto de cero. Si $M$ es no trivial, esta familia es no vacía y tiene un elemento maximal $\Ann(m)$. Afirmamos que $\Ann(m)$ es un ideal primo homogéneo.
+
+Sea $b \in R$ un elemento homogéneo tal que $b \notin \Ann(m)$. Puesto que $bm \ne 0$, $\Ann(bm)$ es un elemento de nuestra familia de anuladores. Puesto que $\Ann(m)$ es maximal, $\Ann(m) = \Ann(bm)$. Entonces $ab \in \Ann(m)$ implica $a \in \Ann(bm)$ implica $a \in \Ann(m)$.
+\end{proof}
+
+\begin{proposition}
+Sea $M^{(r)} \subset M$ un submódulo graduado propio. Entonces existe un submódulo graduado intermedio $M^{(r)} \subset M^{(r+1)} \subset M$ tal que $M^{(r+1)} / M^{(r)}$ es de la forma $(R/\p)(d)$.
+\end{proposition}
+
+\begin{proof}
+Sea $\p = \Ann(q)$ un primo homogéneo asociado de $Q^{(r)} = M/M^{(r)}$. Sea $Q^{(r+1)} \subset Q^{(r)}$ el submódulo generado por $q$. Sea $M^{(r+1)} \subset M$ la imagen inversa de $Q^{(r+1)}$. Entonces $M^{(r+1)} / M^{(r)}$ es isomorfo a $Q^{(r+1)}$ y este último es isomorfo a $R/\p$ salvo torcimiento por el grado de $q$.
+\end{proof}
+
+\begin{definition}
+Una \textit{filtración limpia} de $M$ es una filtración por submódulos graduados
+$$0 = M^{(0)} \subset M^{(1)} \subset \dots \subset M^{(r)} = M$$
+tal que, para cada $i = 1 \dots r$, existe un ideal primo homogéneo $\p_i \subset R$ tal que $Q^{(i)} = M^{(i)} / M^{(i-1)}$ es isomorfo a $R/\p_i$ salvo torcimiento.
+\end{definition}
+
+\begin{remark}
+El término ``filtración limpia'' no es estándar, pero es mucho más conveniente decir ``filtracion limpia'' que incrustar la definición en el texto cada vez que la necesitemos.
+\end{remark}
+
+\begin{definition}
+Un $R$-\textit{módulo limpio} es un $R$-módulo graduado que admite una filtración limpia.
+\end{definition}
+
+\begin{remark}
+En cambio, el término ``módulo limpio'' sí es estándar. Ver \cite[p. 93]{eisenbud}.
+\end{remark}
+
+\begin{proposition}
+Todo $R$-módulo graduado finitamente generado $M$ es limpio.
+\end{proposition}
+
+\begin{proof}
+Puesto que $M$ es un módulo noetheriano y la familia de submódulos limpios es no vacía (contiene al submódulo trivial), $M$ tiene un submódulo limpio maximal $M^{(r)} \subset M$.
+
+Por la proposición anterior, si $M^{(r)} \subset M$ fuese un submódulo propio, existiría otro submódulo más grande $M^{(r+1)} \subset M$ tal que $Q^{(r+1)} = M^{(r+1)} / M^{(r)}$ es de la forma $R/\p$ salvo torcimiento. Esto es imposible, porque $M^{(r)}$ es maximal. Por ende, $M = M^{(r)}$ es limpio.
+\end{proof}
+
+\begin{definition}
+Un \textit{primo minimal} de $M$ es un ideal primo $\p \subset R$ minimal entre los que aparecen en una filtración limpia de $M$. La \textit{multiplicidad} de $M$ en un primo minimal $\p \subset R$, denotada por $\mu_\p(M)$, es la longitud de $M_\p$ como $R_\p$-módulo.
+\end{definition}
+
+\begin{remark}
+No está claro que el concepto de ``primo minimal'' está bien definido. En principio podría haber dos filtraciones limpias distintas de $M$ que induzcan conjuntos distintos de primos minimales. Demostraremos que no es el caso.
+\end{remark}
+
+\begin{proposition}
+Sea $\p \subset R$ un primo minimal de $M$. Entonces $\p$ aparece exactamente $\mu_\p(M)$ veces en cualquier filtración limpia de $M$.
+\end{proposition}
+
+\begin{proof}
+Ignorando la gradación, la localización en $\p$ respeta las sucesiones exactas. Entonces la longitud de $M_\p$ como $R_\p$-módulo es $\ell(M_\p) = \ell(Q_\p^{(1)}) + \dots + \ell(Q_\p^{(r)})$. Por construcción, si $\p_i = \p$, entonces $Q_\p^{(i)} = R(\p)$ es el cuerpo de fracciones de $R/\p$ y tiene longitud $\ell(Q_\p^{(i)}) = 1$. Puesto que $\p$ es minimal, si $\p_i \ne \p$, entonces $Q_\p^{(i)}$ es el módulo trivial y tiene longitud $\ell(Q_\p^{(i)}) = 0$.
+\end{proof}

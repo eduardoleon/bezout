@@ -1,0 +1,13 @@
+\chapter{Variedades proyectivas}
+
+\noindent El principal atractivo de las variedades afines es que son fáciles de usar. Esto no debería causar mayor sorpresa, porque una variedad afín es simplemente la reinterpretación de un dominio como objeto geométrico. Sin embargo, la simplicidad algebraica de las variedades afines no es garantía de que éstas tengan las propiedades geométricas que necesitamos en un momento dado.
+
+Recordemos que el propósito de este trabajo es intersecar dos variedades algebraicas y contar las componentes irreducibles de la intersección. Al menos en este caso particular, las variedades afines no son tan bien comportadas como uno quisiera.
+
+Uno de los defectos de la geometría afín es que la intersección de dos variedades afines no es estable bajo perturbaciones pequeñas. Para ilustrar esto de manera concreta, supongamos que el cuerpo base es $k = \C$. En el plano $\C^2$, las rectas $x = 0$ y $x = 1$ no se intersecan en ningún punto. Sin embargo, si perturbamos ligeramente la pendiente de $x = 0$ para que sea $x = \varepsilon y$, entonces la intersección de esta última recta con $x = 1$ consta exactamente de un punto.
+
+Otro defecto aún más serio de la geometría afín es que, en dimensiones $\ge 2$, el grado de una función regular sobre $\A^n$ no es invariante bajo la acción del grupo de automorfismos\footnote{El problema de fondo es que $\Aut(\A^n)$ es un grupo demasiado complicado. De hecho, existen conjeturas aún no resueltas sobre este grupo, como la famosa \textit{conjetura del jacobiano}: todo endomorfismo regular $\varphi : \A^n \to \A^n$ cuyo jacobiano es una constante no nula es en efecto un automorfismo.} de $\A^n$. Por ejemplo, $f(x,y) = x$ tiene grado $1$, pero su imagen bajo el pullback de $\varphi(x,y) = (x + y^2, y)$ tiene grado $2$. No parece haber otras invariantes numéricas que podamos asociar a una hipersuperficie afín, mucho menos una variedad afín en general.
+
+En este capítulo, presentamos otra clase de variedades algebraicas, las \textit{variedades proyectivas}, que son un poco más complicadas que las variedades afines, pero cuyas intersecciones son mucho mejor comportadas. Las variedades proyectivas son subconjuntos del \textit{espacio proyectivo}, que está expresamente construido para que sus automorfismos sean transformaciones lineales.
+
+Toda variedad proyectiva tiene un \textit{anillo de coordenadas homogéneo}. Este anillo no describe a la variedad como espacio abstracto, sino la manera como está encajada en el espacio proyectivo. Para nosotros, esto no es un problema, porque la intersección de dos variedades solamente tiene sentido si ambas están encajadas en un ambiente común.

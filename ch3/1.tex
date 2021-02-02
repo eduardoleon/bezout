@@ -1,0 +1,85 @@
+\section{Definiciones básicas}
+
+\begin{definition}
+Un \textit{anillo graduado} es un anillo $R$ con una descomposición
+$$R = R_0 \oplus R_1 \oplus R_2 \oplus \dots$$
+de su grupo aditivo, tal que $R_i R_j \subset R_{i+j}$ para todo $i, j \in \N$.
+\end{definition}
+
+\begin{remark}
+$R_0$ es un anillo y $R_n$ es un $R_0$-módulo para todo $n \in \N$. Por convención, extendemos la gradación de $R$ con $R_n = 0$ para todo $n <0$.
+\end{remark}
+
+\begin{example}
+El anillo de polinomios $k[x_1 \dots x_n]$ es el prototipo de anillo graduado.
+\end{example}
+
+\begin{example}
+El anillo de coordenadas homogéneo de una variedad proyectiva es graduado.
+\end{example}
+
+\begin{example}
+Un anillo graduado no conmutativo importante en la geometría diferencial es el álgebra $\Omega(M)$ de formas diferenciales sobre una variedad diferenciable $M$. Este anillo con la operación de derivada exterior $d : \Omega^n(M) \to \Omega^{n+1}(M)$ es un \textit{álgebra graduada diferencial}.
+\end{example}
+
+\begin{remark}
+En este trabajo no utilizaremos anillos no conmutativos.
+\end{remark}
+
+\begin{definition}
+Un $R$-\textit{módulo graduado} es un $R$-módulo $M$ con una descomposición
+$$M = \dots \oplus M_{-2} \oplus M_{-1} \oplus M_0 \oplus M_1 \oplus M_2 \oplus \dots$$
+de su grupo aditivo, tal que $R_i M_j \subset M_{i+j}$ para todo $i \in \N, j \in \Z$.
+\end{definition}
+
+\begin{example}
+El anillo de coordenadas homogéneo $k_h[V]$ de una variedad proyectiva $V \subset \P^n$ es tanto un $k_h[\P^n]$-módulo graduado como un anillo graduado por cuenta propia.
+\end{example}
+
+\begin{definition}
+El sumando directo $M_n$ se denomina la \textit{parte homogénea} de $M$ de grado $n$ y sus elementos se denominan \textit{elementos homogéneos} de $M$ de grado $n$. La componente de $m \in M$ en la parte homogénea $M_n$ se denomina la \textit{parte homogénea} de $m$ de grado $n$.
+\end{definition}
+
+\begin{remark}
+Para todo $n \in \Z$, la parte homogénea $M_n$ es un $R_0$-módulo.
+\end{remark}
+
+\begin{definition}
+Un \textit{ideal homogéneo} de $R$ es un ideal $I \subset R$ de la forma
+$$I = I_0 \oplus I_1 \oplus I_2 \oplus \dots$$
+donde $I_n$ es un $R_0$-submódulo de $R_n$ para todo $n \in \Z$.
+\end{definition}
+
+\begin{example}
+El \textit{ideal irrelevante} de $R$ es
+$$R_+ = R_1 \oplus R_2 \oplus R_3 \oplus \dots$$
+\end{example}
+
+\begin{definition}
+Un $R$-\textit{submódulo graduado} de $M$ es un $R$-submódulo $N \subset M$ de la forma
+$$N = \dots \oplus N_{-2} \oplus N_{-1} \oplus N_0 \oplus N_1 \oplus N_2 \oplus \dots$$
+donde $N_n$ es un $R_0$-submódulo de $M_n$ para todo $n \in \Z$.
+\end{definition}
+
+\begin{example}
+El submódulo de elementos de $M$ de grado mayor o igual que $n \in \Z$ es
+$$M_{\ge n} = R_n \oplus R_{n+1} \oplus R_{n+2} \oplus \dots$$
+\end{example}
+
+\begin{definition}
+Un \textit{$R$-homomorfismo graduado} es un $R$-homomorfismo $\varphi : M \to N$ de la forma
+$$\varphi = \dots \oplus \varphi_{-2} \oplus \varphi_{-1} \oplus \varphi_0 \oplus \varphi_1 \oplus \varphi_2 \oplus \dots$$
+donde $\varphi_n : M_n \to N_n$ es un $R_0$-homomorfismo para todo $n \in \Z$.
+\end{definition}
+
+\begin{remark}
+El núcleo $\ker \varphi$ y el conúcleo $\coker \varphi$ son módulos graduados.
+\end{remark}
+
+\begin{definition}
+Sea $l \in \Z$ un número entero. El $R$-\textit{módulo torcido} $M(l)$ es el mismo $R$-módulo $M$, pero con la nueva gradación $M(l)_n = M_{n+l}$.
+\end{definition}
+
+\begin{remark}
+Torcer un anillo graduado $R$ preserva la estructura de $R$-módulo, pero destruye la estructura de anillo graduado.
+\end{remark}

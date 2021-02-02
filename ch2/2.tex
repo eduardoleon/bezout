@@ -1,0 +1,54 @@
+\section{Conjuntos algebraicos proyectivos}
+
+\begin{definition}
+El \textit{espacio proyectivo} de dimensión $n \in \N$, denotado $\P^n$, es el conjunto de rectas $L_p \subset \A^{n+1}$. Para enfatizar que $\P^n$ es un objeto geométrico, llamaremos \textit{puntos} a las rectas $L_p$ y llamaremos \textit{coordenadas homogéneas} de $L_p$ a las coordenadas ordinarias de $p$.
+\end{definition}
+
+\begin{remark}
+A diferencia de las coordenadas ordinarias de $p \in \A^n$, las coordenadas homogéneas de $L_p \in \P^n$ no son únicas, ya que pueden ser reescaladas.
+\end{remark}
+
+\begin{definition}
+El \textit{anillo de coordenadas homogéneo} de $\P^n$ es $k_h[\P^n] = k[\A^{n+1}]$.
+\end{definition}
+
+\begin{definition}
+Sea $F \subset k_h[\P^n]$ un conjunto de funciones homogéneas. Decimos que el punto $L_p \in \P^n$ es un \textit{cero} de $F$ si $f(p) = 0$ para todo $f \in F$. El \textit{conjunto algebraico proyectivo} de $F$, denotado $V(F)$, es el conjunto de ceros de $F$ en $\P^n$.
+\end{definition}
+
+\begin{remark}
+Si $\a \subset k[\A^n]$ es el ideal homogéneo generado por $F$, entonces $V(\a) = V(F)$.
+\end{remark}
+
+\begin{example}
+La \textit{curva elíptica} $V(zy^2 + xz^2 - x^3) \subset \P^2$ es una curva proyectiva plana.
+\end{example}
+
+\begin{example}
+La \textit{superficie cuádrica} $V(xy - zw) \subset \P^3$ es una superficie proyectiva.
+\end{example}
+
+\begin{definition}
+Sea $X \subset \P^n$ un conjunto de puntos. El \textit{cono afín} sobre $X$, denotado por $C(X)$, es la unión de los puntos $L_p \in X$, considerados como rectas en $\A^{n+1}$. Por convención, el cono afín sobre el conjunto proyectivo vacío es el origen de coordenadas de $\A^{n+1}$.
+\end{definition}
+
+\begin{remark}
+Por construcción, $X$ es un conjunto algebraico proyectivo si y sólo si $C(X)$ es un conjunto algebraico afín.
+\end{remark}
+
+\begin{definition}
+Sea $X \subset \P^n$ un conjunto de puntos. Decimos que una función regular $f : \A^{n+1} \to k$ se \textit{anula} en $X$ si $f(p) = 0$ para todo $L_p \in X$. El ideal de $X$, denotado $I(X)$, está conformado por las funciones regulares sin inversa multiplicativa que se anulan en $X$.
+\end{definition}
+
+\begin{remark}
+Por construcción, $I(X) = I(C(X))$.
+\end{remark}
+
+\begin{corollary}
+Existen correspondencias biyectivas entre
+
+\begin{itemize}
+    \item Los subconjuntos de $\P^n$ y los conos afines en $\A^{n+1}$.
+    \item Los subconjuntos algebraicos de $\P^n$ y los conos algebraicos afines en $\A^{n+1}$. \qed
+\end{itemize}
+\end{corollary}

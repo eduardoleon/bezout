@@ -1,0 +1,45 @@
+\section{Variedades casi proyectivas}
+
+\begin{preliminaries}
+Sean $V \subset \P^n$ y $W \subset \P^m$ dos variedades casi proyectivas, tal y como definimos a continuación.
+\end{preliminaries}
+
+\begin{definition}
+Una \textit{variedad casi proyectiva} es un subconjunto abierto de una variedad proyectiva.
+\end{definition}
+
+\begin{definition}
+Un \textit{morfismo regular} es una función continua $\varphi : V \to W$ tal que, para toda función regular $f : U \to k$ definida sobre un abierto de Zariski $U \subset W$, el pullback $\varphi^\star(f) : \varphi^{-1}(U) \to k$ es también una función regular.
+\end{definition}
+
+\begin{definition}
+Un \textit{isomorfismo regular} es un morfismo regular invertible cuya inversa es regular.
+\end{definition}
+
+\begin{proposition}
+Sea $U \subset \P^n$ el complemento de un hiperplano. Entonces existe un isomorfismo regular $\varphi : \A^n \to U$.
+\end{proposition}
+
+\begin{proof}
+Supongamos sin pérdida de generalidad que $U$ es el complemento del hiperplano $x_0 = 0$. Entonces $\varphi(x_1 \dots x_n) = [1 : x_1 : \dots : x_n]$ es un isomorfismo.
+\end{proof}
+
+\begin{definition}
+Un \textit{morfismo racional} $\varphi : V \dashrightarrow W$ es un morfismo regular $\varphi : U \to W$ que parte de un subconjunto abierto denso $U \subset V$. Decimos que $\varphi$ está \textit{definido} sobre los puntos $p \in U$.
+\end{definition}
+
+\begin{definition}
+Un \textit{morfismo birracional} $\varphi : V \dashrightarrow V'$ es un isomorfismo regular $\varphi : U \to U'$ entre subconjuntos abiertos y densos de $V, V'$, respectivamente.
+\end{definition}
+
+\begin{example}
+El espacio afín $\A^n$ es birracionalmente equivalente al espacio proyectivo $\P^n$.
+\end{example}
+
+\begin{proposition}
+Dos variedades son \textit{birracionalmente equivalentes} si y sólo si sus cuerpos de fracciones son isomorfos.
+\end{proposition}
+
+\begin{proof}
+Ver \cite[p. 155]{fulton}.
+\end{proof}

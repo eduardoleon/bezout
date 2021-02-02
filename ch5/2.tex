@@ -1,0 +1,69 @@
+\section{Dimensión local}
+
+\noindent La referencia para esta sección es \cite[pp. 120-121]{atiyah}.
+
+\begin{preliminaries}
+Sean $R$ un anillo local noetheriano y $\m \subset R$ su ideal maximal.
+\end{preliminaries}
+
+\begin{notation}
+Si $S$ es un $R$-álgebra finitamente generada como $R$-módulo, denotaremos por $d(S)$ la dimensión de $S$ como $R$-módulo y denotaremos por $\dim S$ la dimensión de Krull de $S$.
+\end{notation}
+
+\begin{proposition}
+Sean $\p \subset R$ un ideal primo y $x \in R$ un elemento tal que $x \notin \p$. Sea $\a \subset R$ el ideal generado por $\p$ y $x$. Entonces $d(R/\a) < d(R)$.
+\end{proposition}
+
+\begin{proof}
+Sean $S = R/\p$ y $\n \subset S$ su ideal maximal. Puesto que $x$ no es divisor de cero en $S$, por la proposición 4.12, $d(R/\a) < d(S)$. Por otro lado, el homomorfismo cociente $\pi : R \to S$ induce para todo $n \in \N$ un homomorfismo cociente $\pi_n : R/\m^n \to S/\n^n$. Entonces $\ell(S/\n^n) \le \ell(R/\m^n)$. Por ende, $d(R/\a) < d(S) \le d(R)$.
+\end{proof}
+
+\begin{proposition}
+$\dim R \le d(R)$.
+\end{proposition}
+
+\begin{proof}
+Por inducción en $d(R)$. Si $d(R) = 0$, entonces $\chi^R$ es constante, por ende $\m^n = \m^{n+1}$ para todo $n \gg 0$. Por el lema de Nakayama, $\m^n = 0$ para todo $n \gg 0$. Por ende, $\dim R = 0$.
+
+Supongamos ahora que $R$ contiene una cadena de primos $\p \subset \p_0 \subset \dots \subset \p_r$. Tomemos $x \in \p_0$ tal que $x \notin \p$ y sea $\a \subset R$ el ideal generado por $\p$ y $x$. Entonces $\p_i/\a$ es una cadena de primos de longitud $r$ en $S = R/\a$. Por la proposición anterior, $d(S) < d(R)$. Usando la hipótesis inductiva, tenemos $r \le \dim S \le d(S) < \dim R$. Por ende, $r + 1 \le d(R)$. Generalizando, $\dim R \le d(R)$.
+\end{proof}
+
+\begin{corollary}
+La dimensión de Krull de $R$ es finita. \qed
+\end{corollary}
+
+\begin{corollary}
+Todo ideal propio $\a \subset R$ tiene altura finita. \qed
+\end{corollary}
+
+\begin{proposition}
+Sea $\a \subset R$ un ideal propio que no es $\m$-primario. Entonces existe un elemento no invertible $x \in \m$ tal que $\b = \langle \a, x \rangle$ tiene mayor altura que $\a$.
+\end{proposition}
+
+\begin{proof}
+Sean $\p_1, \dots, \p_r \supset \a$ los primos minimales de altura $h(\p_i) = h(\a)$. Puesto que $\p_i \ne \m$ para todo $i$, existe algún $x \in \m$ tal que $x \notin \p_i$ para todo $i$.
+
+Para validar nuestra elección, tomemos ideales primos $\p \subset \q \subset R$ tales que $\a \subset \p$ y $\b \subset \q$. Por construcción, si $\p = \p_i$ para algún $i$, entonces la inclusión $\p \subset \q$ es propia. Entonces $h(\q) > h(\a)$. Generalizando, $h(\b) > h(\a)$.
+\end{proof}
+
+\begin{proposition}
+$d(R) \le \dim R$.
+\end{proposition}
+
+\begin{proof}
+Usando la proposición anterior $d = d(R)$ veces, consigamos elementos $x_1, \dots, x_d \in \m$ que generan un ideal $\a \subset R$ de altura $h(\a) \ge d \ge \dim R$. Entonces $\a$ es $\m$-primario.
+\end{proof}
+
+\begin{theorem}
+(Teorema de la dimensión local) Las siguientes cantidades son iguales:
+
+\begin{itemize}
+    \item La longitud máxima de una cadena de primos en $R$.
+    \item El grado del polinomio característico $\chi^M$.
+    \item El menor número de generadores de un ideal $\m$-primario.
+\end{itemize}
+\end{theorem}
+
+\begin{proof}
+Es consecuencia directa de las proposiciones 5.2 y 5.6.
+\end{proof}

@@ -1,0 +1,36 @@
+\chapter*{Introducción}
+\addcontentsline{toc}{chapter}{Introducción}
+\markboth{INTRODUCCIÓN}{INTRODUCCIÓN}
+
+\noindent La geometría algebraica clásica estudia los espacios de soluciones de ecuaciones polinomiales. En general, no es posible calcular explícitamente dichas soluciones. Esto nos obliga a buscar maneras indirectas de obtener información acerca de los espacios de soluciones.
+
+Un resultado importante en la geometría algebraica clásica es el siguiente teorema atribuido al matemático francés Étienne Bézout\footnote{Aunque \cite[p. 51]{kirwan} cuestiona esta atribución.}, que relaciona los grados de dos curvas con el número de puntos en que éstas se intersecan.
+
+\setcounter{chapter} 6
+\setcounter{counter} 1
+\begin{theorem}
+(Bézout) Sean $F, G \subset \P^2$ dos curvas proyectivas planas que no tienen componentes irreducibles en común. Sean $p_1 \dots p_s \in \P^2$ los puntos de $F \cap G$. Entonces,
+$$\mu_1 + \dots + \mu_s = \deg F \cdot \deg G$$
+donde $\mu_j$ es la multiplicidad de $F \cap G$ sobre $p_j$.
+\end{theorem}
+\setcounter{chapter} 0
+
+\begin{proof}
+Ver \cite[pp. 112-115]{fulton} o \cite[pp. 62-63]{kirwan}.
+\end{proof}
+
+El objetivo de este trabajo es demostrar una generalización del teorema de Bézout aplicable a la intersección de variedades en el espacio proyectivo de dimensión arbitraria. Para ello, tenemos que encontrar respuestas satisfactorias a las siguientes preguntas:
+
+\begin{enumerate}
+    \item ¿Qué es el grado de una variedad proyectiva arbitraria $Y \subset \P^n$?
+    \item ¿Cuál es la multiplicidad de $Y \cap Z$ sobre sus componentes irreducibles?
+    \item ¿Cuál es el análogo correcto en dimensiones mayores de la hipótesis de que $Y, Z$ no tienen componentes irreducibles en común?
+\end{enumerate}
+
+Este trabajo está dividido en seis capítulos. En los dos primeros capítulos, presentaremos las variedades afines y proyectivas, haciendo hincapié en la correspondencia entre las variedades y los anillos de coordenadas que las describen. Algunos aspectos de nuestra presentación son un tanto idiosincráticos. En particular, haremos más énfasis en el cono afín sobre una variedad proyectiva que en la cobertura de la variedad por abiertos afines\footnote{En la medida de lo posible, evitaremos apelar a la idea topológica de vecindad, ya que la geometría algebraica tiene sus propias ideas sobre qué es una vecindad.}.
+
+Los dos siguientes capítulos son álgebra pura y dura. En último término, todo anillo debe ser estudiado a través de sus módulos, así que desarrollaremos la maquinaria algebraica para extraer información cuantitativa de un módulo finitamente generado sobre un anillo de coordenadas. Nos enfocaremos en dos casos específicos: en el capítulo 3, estudiaremos los módulos sobre anillos que describen variedades proyectivas, mientras que, en el capítulo 4, estudiaremos los módulos sobre anillos que describen vecindades genéricas de un punto.
+
+El capítulo 5 marca el inicio de nuestro retorno a la geometría. Para ello, comenzamos dando una interpretación visual e intuitiva, aunque no totalmente rigurosa, para un módulo finitamente generado sobre un anillo de coordenadas. Demostraremos que las herramientas construidas en los capítulos 3 y 4 tienen un significado geométrico consistente con esta interpretación.
+
+Finalmente, en el capítulo 6, enunciaremos y demostraremos dos teoremas (en realidad, dos variantes del mismo teorema) que generalizan el teorema clásico de Bézout. Como aplicación de estos resultados, calcularemos el grupo de automorfismos del espacio proyectivo $\P^n$.

@@ -1,0 +1,39 @@
+\section{Polinomio de Hilbert}
+
+\noindent La referencia para esta sección es \cite[pp. 117-118]{atiyah}.
+
+\begin{preliminaries}
+Sean $R$ un anillo graduado noetheriano y $M$ un $R$-módulo graduado finitamente generado, como en la sección 3.2. Supongamos que los generadores $x_i$ de $R$ son de grado $d_i = 1$. Sea $\lambda$ una función aditiva no negativa sobre la clase de $R_0$-módulos finitamente generados.
+\end{preliminaries}
+
+\begin{proposition}
+Existe un polinomio $P_M \in \Q[n]$ de grado $r = \dim M$ tal que $\lambda(M_n) = P_M(n)$ para todo $n \gg 0$.
+\end{proposition}
+
+\begin{proof}
+Puesto que todos los $x_i$ son de grado $1$, el denominador de $S_M$ es una potencia de $1-t$. Simplificando todas las ocurrencias del factor $1-t$ en el numerador, tenemos
+$$S_M(t) = \frac {g(t)} {(1-t)^{r+1}}$$
+
+Expresando los factores como series de potencias, tenemos
+$$\frac 1 {(1-t)^{r+1}} = \sum_{n=0}^\infty \binom {n+r} r t^n, \qquad g(t) = \sum_{j=a}^b u_j t^j$$
+
+Entonces, para todo $n \ge b$, el coeficiente correspondiente en la serie de Poincaré es
+$$\lambda(M_n) = P_M(n) = \sum_{j=a}^b u_j \binom {n+r-j} r$$
+
+Por simple inspección, $P_M$ es un polinomio numérico de grado $r$.
+\end{proof}
+
+\begin{definition}
+El polinomio $P_M = [c_0; \dots; c_r]$ de la proposición anterior se denomina \textit{polinomio de Hilbert} de $M$ con respecto a $\lambda$. El coeficiente $c_0$ es el \textit{grado} de $M$.
+\end{definition}
+
+\begin{corollary}
+Sea $x \in R$ un elemento homogéneo que no es divisor de cero en $M$. Si $M$ tiene dimensión positiva, entonces $N = M/xM$ tiene grado $\deg N = \deg M \cdot \deg x$.
+\end{corollary}
+
+\begin{proof}
+Sea $d = \deg x$. Puesto que el polinomio de Hilbert es aditivo,
+$$P_N(n) = P_M(n) - P_{M(-d)}(n) = [c_0; \dots; c_r](n) - [c_0; \dots; c_r](n-d) = [dc_0; \dots](n)$$
+
+Entonces $N$ tiene grado $\deg N = dc_0 = \deg M \cdot \deg x$.
+\end{proof}

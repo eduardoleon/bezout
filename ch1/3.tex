@@ -1,0 +1,57 @@
+\section{El diccionario álgebra-geometría}
+
+\begin{preliminaries}
+Sea $V \subset \A^n$ un conjunto algebraico afín.
+\end{preliminaries}
+
+\begin{proposition}
+Los subconjuntos algebraicos de $V$ forman una familia cerrada bajo uniones finitas e intersecciones arbitrarias. Por ende, sus complementos forman una topología sobre $V$.
+\end{proposition}
+
+\begin{proof}
+Ver \cite[p. 2]{hartshorne}.
+\end{proof}
+
+\begin{definition}
+La \textit{topología de Zariski} sobre $V$ es la topología de la proposición anterior.
+\end{definition}
+
+\begin{remark}
+Por el teorema de la base de Hilbert, $V$ es un espacio topológico noetheriano.
+\end{remark}
+
+\begin{proposition}
+Un conjunto algebraico afín es irreducible si y sólo si su ideal es primo.
+\end{proposition}
+
+\begin{proof}
+Ver \cite[p. 15]{fulton}.
+\end{proof}
+
+\begin{corollary}
+Las componentes irreducibles de $V$ son los conjuntos $V(\p)$, donde $\p \subset k[\A^n]$ es un ideal primo minimal entre aquellos que contienen a $I(V)$. \qed
+\end{corollary}
+
+\begin{theorem}
+(Teorema de los ceros de Hilbert)
+
+\begin{itemize}
+    \item Todo ideal maximal de $k[\A^n]$ es el ideal de un punto $p \in \A^n$.
+    \item Todo ideal propio de $k[\A^n]$ se anula en algún punto $p \in \A^n$.
+    \item Sea $\a \subset k[\A^n]$ un ideal arbitrario. Entonces $I(V(\a)) = \Rad(\a)$.
+\end{itemize}
+\end{theorem}
+
+\begin{proof}
+Ver \cite[pp. 20-22]{fulton}.
+\end{proof}
+
+\begin{corollary}
+Existen correspondencias biyectivas entre
+
+\begin{itemize}
+    \item Los puntos de $\A^n$ y los ideales maximales de $k[\A^n]$.
+    \item Los subconjuntos algebraicos irreducibles de $\A^n$ y los ideales primos de $k[\A^n]$.
+    \item Los subconjuntos algebraicos de $\A^n$ y los ideales radicales de $k[\A^n]$. \qed
+\end{itemize}
+\end{corollary}

@@ -1,0 +1,45 @@
+\section{Polinomios numéricos}
+
+\begin{preliminaries}
+El polinomio nulo tiene grado $-1$.
+\end{preliminaries}
+
+\begin{proposition}
+Los coeficientes binomiales
+$$B_r(n) = \binom {n+r} r = \frac 1 {r!} \, (n+1) (n+2) \dots (n+r)$$
+forman una base de $\Q[n]$ como $\Q$-espacio vectorial.
+\end{proposition}
+
+\begin{proof}
+Para todo $r \in \N$, el subespacio $V_r \subset \Q[z]$ generado por $B_0 \dots B_r$ es igual al subespacio generado por $1, x, \dots, x^r$. Puesto que cada $V_r \subset V_{r+1}$ es una inclusión propia, $B_r$ es una sucesión linealmente independiente. Puesto que la unión de los subespacios $V_r$ es todo el espacio $\Q[z]$, la sucesión $B_r$ genera a $\Q[z]$. Entonces $B_r$ es una base de $\Q[z]$.
+\end{proof}
+
+\begin{notation}
+Será muy conveniente utilizar la abreviación
+$$[c_0; c_1; \dots; c_r] = c_0 B_r + c_1 B_{r-1} + \dots + c_r B_0$$
+ya que la base de coeficientes binomiales es más importante que la base de monomios.
+\end{notation}
+
+\begin{definition}
+Un polinomio $P \in \Q[n]$ es \textit{numérico} si $P(n) \in \Z$ para todo $n \in \Z$.
+\end{definition}
+
+\begin{notation}
+Dado cualquier polinomio $P \in \Q[n]$, escribiremos $\Delta P(n) = P(n) - P(n-1)$.
+\end{notation}
+
+\begin{proposition}
+Sea $P \in \Q[n]$ un polinomio de grado $d$. Supongamos que existen $d+1$ enteros consecutivos $n = a \dots b$ tales que $P(n) \in \Z$. Entonces $P$ es un polinomio numérico.
+\end{proposition}
+
+\begin{proof}
+Si $P = 0$, entonces no hay nada que demostrar. Si $P \ne 0$, entonces $\Delta P$ tiene grado $d-1$ y, para los $d$ enteros consecutivos $n = a+1 \dots b$, tenemos $\Delta P(n) \in \Z$. Inductivamente, $\Delta P$ es un polinomio numérico. Entonces $P$ también es un polinomio numérico.
+\end{proof}
+
+\begin{proposition}
+Si $P = [c_0; c_1; \dots; c_r]$ es numérico, entonces $c_0, c_1, \dots, c_r \in \Z$.
+\end{proposition}
+
+\begin{proof}
+Si $P = 0$, entonces no hay nada que demostrar. Si $P \ne 0$, entonces $\Delta P = [c_0; c_1; \dots; c_{r-1}]$ es numérico y tiene grado menor que $P$. Inductivamente, $c_0, c_1, \dots, c_{r-1} \in \Z$. Claro está, $c_r \in \Z$ también, porque $c_r = P(0)$.
+\end{proof}

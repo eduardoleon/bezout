@@ -1,0 +1,46 @@
+\section{Segundo intento}
+
+\begin{preliminaries}
+Sean $H_1 \dots H_n \subset \P^n$ hipersuperficies proyectivas. Sean $f_1 \dots f_n \in R$ generadores de $I_1 \dots I_n \subset R$, los ideales de $H_1 \dots H_n$, respectivamente. Supongamos que ninguna componente irreducible de la intersección parcial $Z_r = H_1 \cap \dots \cap H_r$ está contenida en $H_{r+1}$, de modo que la intersección total $Z = Z_n$ está conformada por una cantidad finita de puntos $p_1 \dots p_s \in \P^n$. Sean $\p_1 \dots \p_n \subset R$ los ideales de $p_1 \dots p_s$, respectivamente.
+\end{preliminaries}
+
+\begin{definition}
+El \textit{anillo de la intersección parcial} $Z_r = H_1 \cap \dots \cap H_r$ es $M_r = R / (I_1 + \dots + I_r)$.
+\end{definition}
+
+\begin{definition}
+El \textit{anillo de la intersección total} $Z = Z_n$ es $M = M_n$.
+\end{definition}
+
+\begin{remark}
+Al igual que en el caso anterior, el soporte de $M_r$ siempre es $S(M_r) = Z_r$, pero $M_r$ no es necesariamente el anillo de coordenadas homogéneo de $Z_r$.
+\end{remark}
+
+\begin{definition}
+La \textit{multiplicidad} de $Z$ sobre $p_j$ es la longitud de $M_{\p_j}$ como $R_{\p_j}$-módulo.
+\end{definition}
+
+\begin{remark}
+Utilizaremos sin demostración la siguiente proposición.
+\end{remark}
+
+\begin{proposition}
+Si $\dim M_{r+1} = \dim M_r - 1$, entonces $f_{r+1}$ no es divisor de cero en $M_r$.
+\end{proposition}
+
+\begin{proof}
+Es un análogo graduado de \cite[\href{https://stacks.math.columbia.edu/tag/00N6}{Tag 00N6}]{stacks}.
+\end{proof}
+
+\begin{theorem}
+Sean $H_1 \dots H_n \subset \P^n$ hipersuperficies. Supongamos que ninguna $H_{r+1}$ contiene a ninguna componente irreducible de la intersección parcial $H_1 \cap \dots \cap H_r$. Sean $p_1 \dots p_s \in \P^n$ los puntos de la intersección total $H_1 \cap \dots \cap H_n$. Entonces,
+$$\mu_1 + \dots + \mu_s = \deg H_1 \cdots \deg H_n$$
+donde $\mu_j$ es la multiplicidad de $H_1 \cap \dots \cap H_r$ sobre $p_j$.
+\end{theorem}
+
+\begin{proof}
+Por el corolario 3.9, cada anillo $M_{r+1}$ tiene grado
+$$\deg M_{r+1} = \deg \frac {M_r} {f_{r+1} M_r} = \deg M_r \cdot \deg H_{r+1}$$
+
+Entonces $M$ tiene grado $\deg M = \deg H_1 \cdots \deg H_n$. Por otro lado, los únicos ideales primos relevantes que aparecen en las filtraciones limpias de $M$ son los ideales de $p_1 \dots p_s$. Entonces $M$ tiene grado $\deg M = \mu_1 + \dots + \mu_s$.
+\end{proof}

@@ -1,0 +1,80 @@
+\section{Variedades afines}
+
+\begin{preliminaries}
+Sean $V \subset \A^n$ y $W \subset \A^m$ dos variedades afines, como definimos a continuación.
+\end{preliminaries}
+
+\begin{definition}
+Una \textit{variedad afín} es un conjunto algebraico afín vacío o irreducible.
+\end{definition}
+
+\begin{definition}
+Una \textit{función regular} sobre $V$ es una función $f : V \to k$ que se puede expresar como restricción a $V$ de una función regular $\bar f : \A^n \to k$. El \textit{anillo de coordenadas} de $V$, denotado por $k[V]$, está conformado por las funciones regulares sobre $V$.
+\end{definition}
+
+\begin{remark}
+Dos funciones regulares sobre $\A^n$ inducen la misma función sobre $V$ si y sólo si su diferencia está en $I(V)$. Por ende, $k[V]$ es naturalmente isomorfo a $k[\A^n] / I(V)$.
+\end{remark}
+
+\begin{definition}
+Un \textit{morfismo regular} es una función $\varphi : V \to W$ tal que, para toda función regular $f : W \to k$, la composición $f \circ \varphi : V \to k$ también es una función regular.
+\end{definition}
+
+\begin{remark}
+La composición de una cantidad finita de morfismos regulares $\varphi_i : V_{i-1} \to V_i$ es un morfismo regular $\varphi_n \circ \dots \circ \varphi_1 : V_0 \to V_n$. Por ende, tenemos una categoría de variedades afines y morfismos regulares.
+\end{remark}
+
+\begin{definition}
+El \textit{pullback} de un morfismo regular $\varphi : V \to W$ es el homomorfismo de $k$-álgebras $\varphi^\star : k[W] \to k[V]$ cuya regla de correspondencia es $\varphi^\star(f) = f \circ \varphi$.
+\end{definition}
+
+\begin{proposition}
+Para cada homomorfismo de $k$-álgebras $\alpha : k[W] \to k[V]$, existe exactamente un morfismo regular $\varphi : V \to W$ cuyo pullback es $\varphi^\star = \alpha$.
+\end{proposition}
+
+\begin{proof}
+Es lógicamente equivalente a \cite[p. 38]{fulton}.
+\end{proof}
+
+\begin{definition}
+Un \textit{isomorfismo regular} es un morfismo regular invertible cuya inversa es regular.
+\end{definition}
+
+\begin{corollary}
+Dos variedades afines son isomorfas si y sólo si sus anillos de coordenadas son isomorfos como $k$-álgebras. \qed
+\end{corollary}
+
+\begin{example}
+El anillo de coordenadas de la cúbica torcida $V \subset \A^3$ es generado por $x : V \to k$, pues las otras dos funciones coordenadas $y, z : V \to k$ son meros sinónimos de $x^2, x^3$, respectivamente. Por ende, $x : V \to \A^1$ es un isomorfismo en la categoría regular.
+\end{example}
+
+\begin{example}
+Sea $V \subset \A^2$ la cúspide cúbica y sea $\varphi : \A^1 \to V$ la aplicación regular $\varphi(t) = (t^2, t^3)$. Todo elemento de $k$ está completamente determinado por su cuadrado y su cubo. Por ende, $\varphi$ es un morfismo regular biyectivo.
+
+Por otro lado, $t = y/x$ es raíz del polinomio mónico $t^2 - x$, pero $t \notin k[V]$. Entonces $k[V]$ no es íntegramente cerrado. Por ende, $k[V]$ no es isomorfo a $k[\A^1]$. Por ende, $V$ no es isomorfo a $\A^1$.
+\end{example}
+
+\begin{remark}
+Este ejemplo es el ejercicio I.3.2.a de \cite[p. 21]{hartshorne}.
+\end{remark}
+
+\begin{example}
+Sea $k$ un cuerpo de característica $p > 0$. La aplicación $f : k \to k$ que envía escalares a sus $p$-ésimas potencias es conocida como el \textit{endomorfismo de Frobenius}. Si $k$ es algebraicamente cerrado, todo elemento de $k$ tiene una única raíz $p$-ésima, por ende $f : \A^1 \to \A^1 $ es una biyección regular de la recta afín sobre sí misma.
+
+Por otro lado, el pullback $f^\star : k[t] \to k[t]$ dado por $f^\star(t) = t^p$ no es un isomorfismo de anillos, razón por la cual $f$ no es un automorfismo regular\footnote{Sin embargo, $f : k \to k$ sí es un automorfismo de cuerpos.}.
+\end{example}
+
+\begin{remark}
+Este ejemplo es el ejercicio I.3.2.b de \cite[p. 21]{hartshorne}.
+\end{remark}
+
+\begin{corollary}
+Existen correspondencias biyectivas entre
+
+\begin{itemize}
+    \item Los conjuntos algebraicos afines $V \subset \A^n$ y las $k$-álgebras reducidas $k[V]$.
+    \item Las variedades afines $V \subset \A^n$ y las $k$-álgebras $k[V]$ sin divisores de cero.
+    \item Los morfismos regulares $\varphi : V \to W$ y los $k$-homomorfismos $\varphi^\star : k[W] \to k[V]$.
+    \item Los isomorfismos regulares $\varphi : V \to W$ y los $k$-isomorfismos $\varphi^\star : k[W] \to k[V]$. \qed
+\end{itemize}
+\end{corollary}

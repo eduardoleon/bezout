@@ -1,0 +1,74 @@
+\section{Serie de Poincaré}
+
+\noindent La referencia para esta sección es \cite[pp. 106, 116-117]{atiyah}.
+
+\begin{preliminaries}
+Sean $R$ un anillo graduado noetheriano y $M$ un $R$-módulo graduado finitamente generado. Sea $\lambda$ una función aditiva sobre la clase de $R_0$-módulos finitamente generados.
+\end{preliminaries}
+
+\begin{proposition}
+El anillo $R_0$ es noetheriano y $R$ es un $R_0$-álgebra finitamente generada.
+\end{proposition}
+
+\begin{proof}
+Puesto que $R$ es un anillo noetheriano, el cociente $R_0 \cong R/R_+$ también es noetheriano y $R_+$ es finitamente generado, digamos, por $x_1 \dots x_s$. Supongamos sin pérdida de generalidad que $x_1 \dots x_s$ son homogéneos de grados $d_1 \dots d_s > 0$. Demostraremos que $x_1 \dots x_s$ también generan a $R$ como $R_0$-álgebra.
+
+Sea $y \in R_n$ un elemento homogéneo. Si $n = 0$, entonces $y$ es trivialmente un polinomio en $x_1 \dots x_s$. Si $n > 0$, entonces existen elementos $a_1 \dots a_s$ tales que $y = a_1 x_1 + \dots + a_s x_s$. Podemos asumir sin pérdida de generalidad que cada $a_i$ es homogéneo de grado $n - d_i$. Por inducción en el grado, $a_1 \dots a_s$ son polinomios en $x_1 \dots x_s$. Entonces $y$ también es un polinomio en $x_1 \dots x_s$.
+\end{proof}
+
+\begin{proposition}
+Las partes homogéneas de $M$ son $R_0$-módulos finitamente generados. Además, sólo un número finito de partes homogéneas de grado negativo pueden ser no triviales.
+\end{proposition}
+
+\begin{proof}
+Sean $m_1 \dots m_r$ generadores de $M$ como $R$-módulo. Asumamos sin pérdida de generalidad que $m_1 \dots m_r$ son homogéneos de grados $d_1 \dots d_r$. Sea $p_i$ una enumeración de los monomios en $x_1 \dots x_s$, los generadores de $R$ de la proposición anterior y sea $c_i$ el grado total de $p_i$. Entonces $M_n$ es generado como $R_0$-módulo por los productos $p_i m_j$ tales que $c_i + d_j = n$. En particular, $M_n$ es trivial cuando $n < d_i$ para todo $i$, porque $c_i \ge 0$ para todo monomio $p_i$.
+\end{proof}
+
+\begin{definition}
+La \textit{serie de Poincaré} de $M$ con respecto a $\lambda$ es la serie de Laurent formal
+$$S_M(t) = \dots + \lambda(M_{-2}) t^{-2} + \lambda(M_{-1}) t^{-1} + \lambda(M_0) + \lambda(M_1) t^1 + \lambda(M_2) t^2 + \dots$$
+\end{definition}
+
+\begin{theorem}
+(Hilbert-Serre) La serie de Poincaré es una función racional de la forma
+$$S_M(t) = \frac {f(t)} {(1 - t^{d_1}) \dots (1 - t^{d_s})}$$
+donde $f \in \Z[t, t^{-1}]$ es un polinomio de Laurent y $d_1 \dots d_s > 0$ son los grados de los generadores $x_1 \dots x_s$ de $R$ como $R_0$-álgebra que aparecen en las proposiciones anteriores.
+\end{theorem}
+
+\begin{proof}
+Por inducción en el número de generadores. Si $s = 0$, entonces $R = R_0$, por ende $M$ sólo tiene un número finito de partes homogéneas no triviales. Por ende, $S_M(t)$ sólo tiene un número de términos, i.e., es un polinomio de Laurent.
+
+Si $s > 0$, consideremos la sucesión exacta graduada
+$$
+\begin{tikzcd}
+    0 \arrow[r] & N \arrow[r] & M(-d_1) \arrow[r, "x_1"] & M \arrow[r] & Q \arrow[r] & 0
+\end{tikzcd}
+$$
+
+Por construcción, la serie de Poincaré $S_M(t)$ es una función aditiva de $M$. Entonces,
+$$S_M(t) - S_{M(-d_1)}(t) = (1 - t^{d_1}) S_M(t) = S_Q(t) - S_N(t)$$
+
+Tanto $N = \ker x_1$ como $Q = \coker x_1$ son $R$-módulos finitamente generados anulados por $x_1$. Entonces ambos son $R'$-módulos finitamente generados, donde $R' \subset R$ es el subálgebra obtenida eliminando $x_1$ de la lista de generadores. Inductivamente, $S_Q(t) - S_N(t)$ es de la forma
+$$(1 - t^{d_1}) S_M(t) = S_Q(t) - S_N(t) = \frac {f(t)} {(1 - t^{d_2}) \dots (1 - t^{d_s})}$$
+
+Reordenando factores, tenemos el resultado buscado.
+\end{proof}
+
+\begin{definition}
+La \textit{dimensión} de $M$ es el uno menos que el orden del polo de $S(t)$ en $t = 1$.
+\end{definition}
+
+\begin{remark}
+En \cite[p. 117]{atiyah}, la dimensión de $M$ está definida como el orden del polo de $S(t)$ en $t = 1$. Nuestra definición es más conveniente para el uso que le queremos dar.
+\end{remark}
+
+\begin{corollary}
+Sea $x \in R$ un elemento homogéneo que no es divisor de cero en $M$. Si $M$ tiene dimensión no negativa, entonces $N = M/xM$ tiene dimensión $\dim N = \dim M - 1$.
+\end{corollary}
+
+\begin{proof}
+Sea $d = \deg x$. Puesto que la serie de Poincaré es aditiva,
+$$S_N(t) = S_M(t) - S_{M(-d)}(t) = (1 - t^d) S_M(t)$$
+
+Simplificando $1 - t^n$ con el denominador de $S_M(t)$, tenemos el resultado buscado.
+\end{proof}

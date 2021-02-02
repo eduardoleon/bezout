@@ -1,0 +1,45 @@
+\section{Dimensión global}
+
+\noindent Las referencias para esta sección son \cite[pp. 121-125]{atiyah} y \cite[pp. 47-49, 51-52]{hartshorne}
+
+\begin{proposition}
+(Teorema de la altura de Krull) Sean $R$ un anillo noetheriano, $\a \subset R$ un ideal y $x_1 \dots x_s$ generadores de $\a$. Entonces todo primo minimal $\p \supset \a$ tiene altura $h(\p) \le s$.
+\end{proposition}
+
+\begin{proof}
+Localicemos en un primo minimal $\p \supset \a$. Entonces los elementos dados $x_1 \dots x_s$ generan el ideal de parámetros $\a_\p \subset R_\p$. Por ende, $h(\p) = \dim R_\p \le s$.
+\end{proof}
+
+\begin{proposition}
+(Teorema de la dimensión afín) Sean $Y, Z \subset \A^n$ dos variedades afines de codimensión $r, s \in \N$. Entonces las componentes irreducibles de $Y \cap Z$ tienen codimensión $\le r + s$.
+\end{proposition}
+
+\begin{proof}
+Supongamos que $Z = V(f)$ es una hipersuperficie afín. En este caso, cada componente irreducible de $Y \cap Z$ corresponde a un primo minimal de $\langle f \rangle \subset k[Y]$. Sea $\p \subset k[Y]$ uno de estos primos minimales. Por el teorema de Krull, $\codim V(\p) = \codim Y + h(\p) \ge r + s$.
+
+Pasemos al caso general. Sea $\A^{2n} = \A^n \times \A^n$ y sea $X' \subset \A^{2n}$ la intersección de $X'' = Y \times Z$ con los hiperplanos $y_j = z_j$. Usando el caso anterior $n$ veces, $\codim X' \le \codim X'' + n = r + s + n$. Por construcción, $X, X'$ son isomorfos. Entonces $\codim X = \codim X' - n \le r + s$.
+\end{proof}
+
+\begin{theorem}
+(Teorema de la dimensión proyectiva) Sean $Y, Z \subset \P^n$ variedades proyectivas de codimensión $r, s \in \N$. Entonces las componentes irreducibles de $Y \cap Z$ tienen codimensión $\le r + s$. Además, si $r + s \le n$, entonces $Y \cap Z$ es no vacío.
+\end{theorem}
+
+\begin{proof}
+La codimensión de un conjunto algebraico proyectivo $V \subset \P^n$ es igual a la codimensión del cono afín $V' \subset \A^{n+1}$ sobre $V$. Si $W \subset \P^n$ es una componente irreducible de $Y \cap Z$, entonces, por el teorema de la dimensión afín, $\codim W = \codim W' \le r + s$.
+
+Por otra parte, el cono afín $X'$ sobre $X = Y \cap Z$ nunca es vacío, ya que siempre contiene al origen. Si $r + s \le n$, entonces $\codim X = \codim X' \le n$. Por ende, $X$ es no vacío.
+\end{proof}
+
+\begin{proposition}
+Sea $R = k[x_0 \dots x_n]$ el anillo de coordenadas homogéneo de $\P^n$ y sea $M$ un $R$-módulo graduado finitamente generado. Entonces $\dim M = \dim S(M)$.
+\end{proposition}
+
+\begin{proof}
+En vista de los resultados de la sección 3.5, podemos asumir sin pérdida de generalidad que $M = R/\p$ para algún ideal primo homogéneo $\p \subset R$. Notemos que torcer $M$ no tiene ningún efecto sobre su dimensión algebraica, $\dim M$, o geométrica, $\dim S(M)$.
+
+Si $\p = \m$ es el ideal irrelevante, entonces, algebraicamente, $\dim M = \deg P_M = \deg 0 = -1$, y geométricamente, $\dim S(M) = \dim \varnothing = -1$.
+
+Si $\p \ne \m$, entonces existe algún elemento homogéneo $x \notin \p$ de grado $1$. Algebraicamente, por el corolario 3.4, $N = M/xM$ tiene dimensión $\dim N = \dim M - 1$. Geométricamente, $S(N)$ es la intersección de $S(M)$ con el hiperplano transversal $x = 0$. Luego, por el teorema de la dimensión proyectiva, $\dim S(N) \ge \dim S(M) - 1$.
+
+Topológicamente, $\dim S(N) = \dim S(M)$ es imposible, pues $S(N)$ es un subconjunto cerrado propio de $S(M)$ y este último es irreducible. Entonces, $\dim S(N) = \dim S(M) - 1$. Por inducción en la dimensión, $\dim N = \dim S(N)$. Por ende, $\dim M = \dim S(M)$.
+\end{proof}

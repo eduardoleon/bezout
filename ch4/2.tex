@@ -1,0 +1,44 @@
+\section{Lema de Artin-Rees}
+
+\noindent Las referencias para esta sección son \cite[p. 107]{atiyah} y \cite[pp. 148-149]{eisenbud}.
+
+\begin{preliminaries}
+Fijemos un anillo noetheriano $R$, un ideal $\a \subset R$ y un $R$-módulo $M$ finitamente generado equipado con una $\a$-filtración.
+\end{preliminaries}
+
+\begin{definition}
+El \textit{álgebra de explosión}\footnote{El anillo y módulo de explosión reciben este calificativo porque son utilizados en la resolución de singularidades mediante un proceso que se llama ``explosión'' de la singularidad.} de $R$ es el anillo graduado
+$$R^\star = R \oplus \a \oplus \a^2 \oplus \a^3 \oplus \dots$$
+\end{definition}
+
+\begin{definition}
+El \textit{módulo de explosión} de $M$ es el $R^\star$-módulo graduado
+$$M^\star = M_0 \oplus M_1 \oplus M_2 \oplus \dots$$
+\end{definition}
+
+\begin{proposition}
+El álgebra de explosión $R^\star$ es un anillo noetheriano.
+\end{proposition}
+
+\begin{proof}
+Puesto que $R$ es noetheriano, $\a \subset R$ es finitamente generado. Por ende, $R^\star = R[\a]$ es un álgebra finitamente generada. Por el teorema de la base de Hilbert, $R^\star$ es un anillo noetheriano.
+\end{proof}
+
+\begin{proposition}
+La filtración $(M_n)$ es estable si y sólo si $M^\star$ es finitamente generado.
+\end{proposition}
+
+\begin{proof}
+Consideremos la sucesión de $R^\star$-submódulos
+$$M_n^\star = M_0 \oplus \dots \oplus M_n \oplus \a M_n \oplus \a^2 M_n \oplus \dots$$
+
+Cada $M_n^\star$ es un $R^\star$-módulo finitamente generado por elementos de $M_0 \dots M_n$. Puesto que $R^\star$ es noetheriano, $M^\star$ es un $R^\star$-módulo finitamente generado si y sólo si $M^\star = M_n^\star$ para todo $n \gg 0$ si y sólo si la filtración $(M_n)$ es estable.
+\end{proof}
+
+\begin{corollary}
+(Artin-Rees) Sea $N \subset M$ un submódulo. Si $(M_n)$ es una $\a$-filtración estable de $M$, entonces la $\a$-filtración inducida sobre $N$ es estable.
+\end{corollary}
+
+\begin{proof}
+Por la proposición anterior, si $(M_n)$ es estable, entonces $M^\star$ es noetheriano, por ende $N^\star$ es noetheriano, por ende $(N_n)$ es estable.
+\end{proof}

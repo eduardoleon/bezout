@@ -1,0 +1,135 @@
+\documentclass[oneside,11pt]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{CJKutf8}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[spanish]{babel}
+\usepackage[style=alphabetic]{biblatex}
+\usepackage{csquotes}
+\usepackage[bottom]{footmisc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{mathrsfs}
+\usepackage{subfiles}
+\usepackage{tikz-cd}
+\usetikzlibrary{babel}
+
+\title{Intersección de variedades proyectivas}   
+\author{Eduardo León (\begin{CJK*}{UTF8}{bkai}梁遠光\end{CJK*})}
+\date{Octubre 2019}
+
+\addbibresource{ref.bib}
+
+\newtheorem{counter}{Contador}[chapter]
+
+\theoremstyle{definition}
+\newtheorem*{preliminaries}{Preliminares}
+\newtheorem*{definition}{Definición}
+\newtheorem*{notation}{Notación}
+\newtheorem*{example}{Ejemplo}
+\newtheorem*{commentary}{Comentario}
+
+\theoremstyle{plain}
+\newtheorem{proposition}[counter]{Proposición}
+\newtheorem{lemma}[counter]{Lema}
+\newtheorem{theorem}[counter]{Teorema}
+\newtheorem{corollary}[counter]{Corolario}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Observación}
+
+\renewcommand \baselinestretch {1.2}
+
+\addto \captionsspanish {\renewcommand \proofname {Prueba}}
+
+\DeclareMathOperator \codim {codim}
+\DeclareMathOperator \coker {coker}
+\DeclareMathOperator \id    {id}
+\DeclareMathOperator \Ann   {Ann}
+\DeclareMathOperator \Aut   {Aut}
+\DeclareMathOperator \GL    {GL}
+\DeclareMathOperator \Rad   {Rad}
+
+\newcommand   \A {\mathbb A}
+\newcommand   \C {\mathbb C}
+\newcommand   \N {\mathbb N}
+\renewcommand \P {\mathbb P}
+\newcommand   \Q {\mathbb Q}
+\newcommand   \R {\mathbb R}
+\newcommand   \Z {\mathbb Z}
+\newcommand   \V {\mathscr V}
+\newcommand   \W {\mathscr W}
+\renewcommand \O {\mathscr O}
+\newcommand   \X {\mathfrak X}
+
+\renewcommand \a {\mathfrak a}
+\renewcommand \b {\mathfrak b}
+\newcommand   \m {\mathfrak m}
+\newcommand   \n {\mathfrak n}
+\newcommand   \p {\mathfrak p}
+\newcommand   \q {\mathfrak q}
+
+\newcommand \pd [2] {\dfrac {\partial f_#1} {\partial x_#2}}
+
+\begin{document}
+
+\thispagestyle{empty}
+\subfile{front.tex}
+\newpage
+
+\pagenumbering{roman}
+\subfile{abs.tex}
+\tableofcontents
+\listoffigures
+
+\newpage
+
+\pagenumbering{arabic}
+\mainmatter
+
+\subfile{intro.tex}
+
+\subfile{ch1/0.tex}
+\subfile{ch1/1.tex}
+\subfile{ch1/2.tex}
+\subfile{ch1/3.tex}
+\subfile{ch1/4.tex}
+
+\subfile{ch2/0.tex}
+\subfile{ch2/1.tex}
+\subfile{ch2/2.tex}
+\subfile{ch2/3.tex}
+\subfile{ch2/4.tex}
+\subfile{ch2/5.tex}
+\subfile{ch2/6.tex}
+
+\subfile{ch3/0.tex}
+\subfile{ch3/1.tex}
+\subfile{ch3/2.tex}
+\subfile{ch3/3.tex}
+\subfile{ch3/4.tex}
+\subfile{ch3/5.tex}
+
+\subfile{ch4/0.tex}
+\subfile{ch4/1.tex}
+\subfile{ch4/2.tex}
+\subfile{ch4/3.tex}
+\subfile{ch4/4.tex}
+\subfile{ch4/5.tex}
+
+\subfile{ch5/0.tex}
+\subfile{ch5/1.tex}
+\subfile{ch5/2.tex}
+\subfile{ch5/3.tex}
+
+\subfile{ch6/0.tex}
+\subfile{ch6/1.tex}
+\subfile{ch6/2.tex}
+\subfile{ch6/3.tex}
+\subfile{ch6/4.tex}
+
+\printbibliography
+
+\end{document}

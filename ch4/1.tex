@@ -1,0 +1,55 @@
+\section{Definiciones básicas}
+
+\begin{preliminaries}
+Fijemos un anillo $R$ y un ideal $\a \subset R$.
+\end{preliminaries}
+
+\begin{definition}
+Un \textit{módulo $\a$-filtrado} es un $R$-módulo $M$ con una cadena de submódulos
+$$M = M_0 \supset M_1 \supset M_2 \supset \dots$$
+tal que $\a M_n \subset M_{n+1}$ para todo $n \in \N$.
+\end{definition}
+
+\begin{example}
+La $\a$-\textit{filtración canónica} sobre el $R$-módulo $M$ es $(M_n) = (\a^n M)$.
+\end{example}
+
+\begin{definition}
+Un \textit{submódulo $\a$-filtrado} de $M$ es un $R$-submódulo $N \subset M$ con una $\a$-filtración $(N_n)$ tal que $N_n \subset M_n$ para todo $n \in \N$.
+\end{definition}
+
+\begin{example}
+La $\a$-\textit{filtración inducida} sobre el $R$-submódulo $N \subset M$ es $(N_n) = (N \cap M_n)$.
+\end{example}
+
+\begin{definition}
+Un \textit{homomorfismo $\a$-filtrado} es un $R$-homomorfismo $\varphi : A \to B$ tal que $\varphi(A_n) \subset B_n$ para todo $n \in \N$.
+\end{definition}
+
+\begin{example}
+Sea $N \subset M$ un submódulo equipado con la $\a$-filtración inducida. Entonces la inclusión de $N$ en $M$ es un homomorfismo $\a$-filtrado.
+\end{example}
+
+\begin{definition}
+Una $\a$-filtración $(M_n)$ es \textit{estable} si $\a M_n = M_{n+1}$ para todo $n \gg 0$.
+\end{definition}
+
+\begin{example}
+La $\a$-filtración canónica es estable por construcción.
+\end{example}
+
+\begin{definition}
+Dos $\a$-filtraciones $(M_n)$, $(M_n')$ de un mismo módulo son \textit{equivalentes} si existe $r \in \N$ tal que $M_{n+r} \subset M_n'$ y $M_{n+r}' \subset M_n$ para todo $n \in \N$.
+\end{definition}
+
+\begin{remark}
+También podemos definir que $(M_n)$, $(M_n')$ son equivalentes si existen $r, r' \in \N$ tales que $M_{n+r'} \subset M_n'$ y $M_{n+r}' \subset M_n$ para todo $n \in \N$.
+\end{remark}
+
+\begin{proposition}
+Todas las $\a$-filtraciones estables de $M$ son equivalentes.
+\end{proposition}
+
+\begin{proof}
+Sea $r \in \N$ el instante en que $(M_n)$ se estabiliza. Entonces $M_{n+r} = \a^n M_r \subset \a^n M \subset M_n$ para todo $n \in \N$. Por ende, $(M_n)$ es equivalente a la $\a$-filtración canónica $(\a^n M)$.
+\end{proof}

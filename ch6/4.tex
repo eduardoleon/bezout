@@ -1,0 +1,37 @@
+\section{Automorfismos de $\P^n$}
+
+\noindent La referencia para esta sección es \cite[pp. 228-229]{harris}.
+
+\begin{preliminaries}
+Lo prometido es deuda. Calcularemos el grupo de automorfismos de $\P^n$.
+\end{preliminaries}
+
+\begin{proposition}
+Toda variedad proyectiva $Y \subset \P^n$ de grado $\deg Y = 1$ es una variedad lineal.
+\end{proposition}
+
+\begin{proof}
+Si $\dim Y = 0$, entonces no hay nada que demostrar. Si $\dim Y > 0$, entonces tomemos un hiperplano $H \subset \P^n$ transversal a $Y$. Entonces el esquema proyectivo $Z = Y \cap H$ tiene dimensión $\dim Z = \dim Y - 1$ y grado $\deg Z = 1$. Por inducción en la dimensión, asumamos que $Z \subset \P^n$ es una variedad lineal.
+
+Tomemos cualquier punto $p \in Y$ tal que $p \notin Z$. Por el teorema 6.1, $Y$ está contenida en todos los hiperplanos de $\P^n$ que pasan por $Z$ y por $p$. Entonces $Y$ está contenida en la intersección de dichos hiperplanos, que es la única variedad lineal $L \subset \P^n$ de dimensión $\dim L = \dim Y$ que pasa por $Z$ y por $p$. Puesto que $L$ es irreducible, $Y = L$.
+\end{proof}
+
+\begin{remark}
+El caso $\dim Y = n$ está contemplado en esta demostración. La intersección de cero hiperplanos de $\P^n$ es todo el espacio $\P^n$.
+\end{remark}
+
+\begin{proposition}
+Todo automorfismo $\varphi : \P^n \to \P^n$ envía hiperplanos a hiperplanos.
+\end{proposition}
+
+\begin{proof}
+Por el teorema 6.4, $n$ hiperplanos $H_i \subset \P^n$ en posición general se intersecan en un único punto $p \in \P^n$ de multiplicidad $1$. Entonces las hipersuperficies $\varphi(H_i)$ también se intersecan en el único punto $\varphi(p)$ de multiplicidad $1$. Por ende, cada $\varphi(H_i)$ es una hipersuperficie de grado $1$, i.e., un hiperplano de $\P^n$.
+\end{proof}
+
+\begin{theorem}
+El grupo de automorfismos de $\P^n$ es $\Aut(\P^n) = \GL(\A^{n+1}) / k^\star$.
+\end{theorem}
+
+\begin{proof}
+Sea $\varphi : \P^n \to \P^n$ un automorfismo. Mediante un cambio de coordenadas lineal, podemos asumir que $\varphi$ fija un hiperplano $H \subset \P^n$. Entonces $\varphi$ también fija el complemento de $H$, que es isomorfo al espacio afín $\A^n$. Más aún, $\varphi$ envía rectas a rectas en esta copia de $\A^n$. Entonces $\varphi$ es una transformación lineal afín de $\A^n$, que se levanta a un automorfismo lineal $\tilde \varphi \in \GL(\A^{n+1})$ y vuelve a descender sobre $\P^n$ como $\varphi \in \GL(\A^{n+1}) / k^\star$.
+\end{proof}

@@ -1,0 +1,49 @@
+\section{Topología y dimensión}
+
+\begin{definition}
+Un espacio topológico es \textit{irreducible} si no se puede expresar como la unión de una cantidad finita de subconjuntos cerrados propios.
+\end{definition}
+
+\begin{remark}
+El espacio topológico vacío tiene cero subconjuntos cerrados y es la unión de todos ellos. Por ende, el espacio vacío \textit{no} es irreducible\footnote{Análogamente, el espacio topológico vacío no es conexo, el grupo o módulo trivial no es simple, un anillo no es ideal maximal de sí mismo, etc. Fuente: \url{https://ncatlab.org/nlab/show/too+simple+to+be+simple}.}.
+\end{remark}
+
+\begin{definition}
+Un espacio topológico $X$ es \textit{noetheriano} si, para toda cadena descendente
+$$X_0 \supset X_1 \supset X_2 \supset \dots$$
+de subespacios cerrados de $X$, existe un instante $n \in \N$ tal que $X_{n+r} = X_n$ para todo $r \in \N$.
+\end{definition}
+
+\begin{remark}
+Todo espacio noetheriano es \textit{casi compacto}, i.e., toda cobertura abierta del espacio tiene una subcobertura finita.
+\end{remark}
+
+\begin{definition}
+La \textit{dimensión} de un espacio topológico $X$ es el supremo de los números $n \in \N$ tales que existe una cadena estrictamente descendente
+$$X_0 \supsetneq X_1 \supsetneq \dots \supsetneq X_n$$
+de subespacios irreducibles cerrados de $X$. Por convención, $\dim \varnothing = -1$.
+\end{definition}
+
+\begin{example}
+Sea $X = \N$ el conjunto de los números naturales con la topología cuyos subconjuntos cerrados son $X_n = \{ k \in \N \mid k < n \}$ para todo $n = 0, 1, 2 \dots \infty$. Entonces $X_n$ es irreducible para todo $n > 0$. Por ende, $X$ es un espacio topológico noetheriano de dimensión infinita.
+\end{example}
+
+\begin{definition}
+Sea $X$ un espacio noetheriano. Las \textit{componentes irreducibles} de $X$ son los elementos maximales de la familia de subespacios irreducibles cerrados de $X$.
+\end{definition}
+
+\begin{proposition}
+Todo subconjunto abierto no vacío de un espacio irreducible es irreducible.
+\end{proposition}
+
+\begin{proof}
+Ver \cite[p. 3]{hartshorne}.
+\end{proof}
+
+\begin{proposition}
+Todo espacio topológico noetheriano tiene un número finito de componentes irreducibles. La unión de todas ellas es el espacio completo. La unión de algunas de ellas, pero no todas, es un subespacio propio.
+\end{proposition}
+
+\begin{proof}
+Es lógicamente equivalente a \cite[p. 5]{hartshorne}.
+\end{proof}

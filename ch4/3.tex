@@ -1,0 +1,43 @@
+\section{Anillos y módulos graduados asociados}
+
+\noindent Las referencias para esta sección son \cite[pp. 111-112]{atiyah} y \cite[pp. 146-148]{eisenbud}.
+
+\begin{preliminaries}
+Fijemos un anillo noetheriano $R$, un ideal $\a \subset R$ y un $R$-módulo $M$ finitamente generado equipado con una $\a$-filtración estable.
+\end{preliminaries}
+
+\begin{definition}
+El \textit{anillo graduado asociado} de $R$ es el anillo graduado
+$$G(R) = \dfrac R \a \oplus \dfrac \a {\a^2} \oplus \dfrac {\a^2} {\a^3} \oplus \dfrac {\a^3} {\a^4} \oplus \dots$$
+\end{definition}
+
+\begin{remark}
+Equivalentemente, podemos definir $G(R) = R^\star / \a R^\star$.
+\end{remark}
+
+\begin{definition}
+El \textit{módulo graduado asociado} de $M$ es el $G(R)$-módulo graduado
+$$G(M) = \dfrac {M_0} {M_1} \oplus \dfrac {M_1} {M_2} \oplus \dfrac {M_2} {M_3} \oplus \dots$$
+\end{definition}
+
+\begin{proposition}
+El anillo graduado asociado $G(R)$ es noetheriano.
+\end{proposition}
+
+\begin{proof}
+El anillo $G(R) = R^\star / \a R^\star$ es noetheriano porque $R^\star$ es noetheriano.
+\end{proof}
+
+\begin{proposition}
+El módulo graduado asociado $G(M)$ es finitamente generado.
+\end{proposition}
+
+\begin{proof}
+Sea $r \in \N$ el instante en que $M_n$ se estabiliza. Para todo $n \ge r$, tenemos
+$$\dfrac {\a} {\a^2} \dfrac {M_n} {M_{n+1}} = \dfrac {M_{n+1}} {M_{n+2}}$$
+
+Por ende, $G(M)$ es generado por el prefijo
+$$\tilde M = \dfrac {M_0} {M_1} \oplus \dots \oplus \dfrac {M_r} {M_{r+1}}$$
+
+Las partes homogéneas $M_n / M_{n+1}$ son $R/\a$-módulos finitamente generados, por ende $\tilde M$ es un $R/\a$-módulo finitamente generado, por ende $G(M)$ es un $G(R)$-módulo finitamente generado.
+\end{proof}

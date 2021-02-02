@@ -1,0 +1,93 @@
+\section{Conos afines}
+
+\begin{preliminaries}
+En este capítulo, $p \in \A^{n+1}$ denotará un punto distinto del origen.
+\end{preliminaries}
+
+\begin{notation}
+Dado un punto $p \in \A^{n+1}$, denotamos $L_p \subset \A^{n+1}$ la única recta que pasa tanto por $p$ como por el origen. Si $p = (a_0, \dots, a_n)$, entonces escribimos $L_p = [a_0 : \dots : a_n]$.
+\end{notation}
+
+\begin{definition}
+Un \textit{cono afín} es un conjunto $C \subset \A^{n+1}$ que contiene al origen y tal que, para todo punto $p \in C$, tenemos también $L_p \subset C$.
+\end{definition}
+
+\begin{remark}
+Toda unión e intersección de conos afines es un cono afín. Por convención, la unión de cero conos afines es el origen y la intersección de cero conos afines es $\A^{n+1}$.
+\end{remark}
+
+\begin{definition}
+Una \textit{función homogénea} sobre $\A^{n+1}$ es una función regular $f : \A^{n+1} \to k$ que puede ser expresada como un polinomio homogéneo en las funciones coordenadas $x_0 \dots x_n$.
+\end{definition}
+
+\begin{remark}
+Si $f(p) = 0$, entonces $f(q) = 0$ para todo $q \in L_p$. Por ende, $V(f)$ es un cono afín.
+\end{remark}
+
+\begin{definition}
+Sea $f : \A^{n+1} \to k$ una función regular de grado $d \in \N$. Las partes homogéneas de $f$ son las únicas funciones homogéneas $f_r : \A^{n+1} \to k$ tales que $f = \sum_r f_r$ y $\deg f_r = r$.
+\end{definition}
+
+\begin{remark}
+Sólo un número finito de partes homogéneas de $f$ son distintas de cero.
+\end{remark}
+
+\begin{proposition}
+Sea $f : \A^{n+1} \to k$ una función regular que se anula en $L_p$. Entonces las partes homogéneas de $f$ se anulan en $L_p$.
+\end{proposition}
+
+\begin{proof}
+Consideremos el polinomio
+$$g(t) = f(tp) = \sum_i f_i(tp) = \sum_i f_i(p) t^i$$
+
+Puesto que $g(t) = 0$ para todo $t \in k$, todos los coeficientes $f_i(p)$ son nulos.
+\end{proof}
+
+\begin{definition}
+Un \textit{ideal homogéneo} es un ideal $\a \subset k[\A^{n+1}]$ tal que las partes homogéneas de toda función regular $f \in \a$ también están contenidas en $\a$.
+\end{definition}
+
+\begin{remark}
+Toda suma, intersección o producto de ideales homogéneos es un ideal homogéneo.
+\end{remark}
+
+\begin{proposition}
+Un ideal de $k[\A^{n+1}]$ es homogéneo si y sólo si es generado por una cantidad finita de funciones homogéneas.
+\end{proposition}
+
+\begin{proof}
+Ver \cite[p. 89]{fulton}.
+\end{proof}
+
+\begin{proposition}
+Un ideal homogéneo $\a \subset k[\A^{n+1}]$ es primo si y solamente si, para todo par de funciones homogéneas $f, g : \A^{n+1} \to k$ tales que $f, g \notin \a$, entonces $fg \notin \a$.
+\end{proposition}
+
+\begin{proof}
+Sean $f_r, g_s$ las partes homogéneas de $f, g$ de mayor grado tales que $f_r, g_s \notin \a$. Entonces, la parte homogénea de $fg$ de grado $r+s$ es de la forma $f_r g_s + h$ para algún $h \in \a$. Puesto que $f_r, g_s \notin \a$, tenemos $f_r g_s + h \notin \a$. Puesto que $\a$ es homogéneo, $fg \notin \a$.
+\end{proof}
+
+\begin{proposition}
+El radical de un ideal homogéneo $\a \subset k[\A^{n+1}]$ es un ideal homogéneo.
+\end{proposition}
+
+\begin{proof}
+Sea $f : \A^{n+1} \to k$ una función regular y sea $f_r$ la parte homogénea de $f$ de mayor grado tal que $f_r^s \notin \a$ para todo $s \in \N$. Entonces, la parte homogénea de $f^s$ de grado $rs$ es de la forma $f_r^s + h_s$ para algún $h_s \in \a$. Entonces $f_r^s + h_s \notin a$. Puesto que $\a$ es homogéneo, $f^r \notin \a$.
+\end{proof}
+
+\begin{proposition}
+Las componentes irreducibles de un cono afín algebraico son conos afines.
+\end{proposition}
+
+\begin{proof}
+Sea $C \subset \A^{n+1}$ un cono algebraico reducible. Entonces $\a = I(C)$ es un ideal homogéneo, pero no primo. Existen funciones homogéneas $f_i : \A^{n+1} \to k$ tales que $f_i \notin \a$, pero $\prod_i f_i \in \a$. Por ende, $C$ es la unión de los subconos afines $V(\a, f_i)$.
+\end{proof}
+
+\begin{corollary}
+Existen correspondencias biyectivas entre
+
+\begin{itemize}
+    \item Los conos afines algebraicos en $\A^{n+1}$ y los ideales radicales homogéneos propios de $k[\A^{n+1}]$.
+    \item Los conos afines irreducibles en $\A^{n+1}$ y los ideales primos homogéneos de $k[\A^{n+1}]$. \qed
+\end{itemize}
+\end{corollary}

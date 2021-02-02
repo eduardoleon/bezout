@@ -1,0 +1,56 @@
+\section{Primer intento}
+
+\noindent La referencia para esta sección es \cite[pp. 53-54]{hartshorne}.
+
+\begin{preliminaries}
+Sea $Y \subset \P^n$ una variedad proyectiva de dimensión $\dim Y > 0$. Sea $H \subset \P^n$ una hipersuperficie que no contiene a $Y$. Sean $Z_1 \dots Z_s \subset \P^n$ las componentes irreducibles de $Y \cap H$ y sean $\p_1 \dots \p_s \subset R$ los ideales de $Z_1 \dots Z_s$, respectivamente.
+\end{preliminaries}
+
+\begin{definition}
+El \textit{anillo de la intersección} $Y \cap H$ es $M = R / (I_Y + I_H)$.
+\end{definition}
+
+\begin{remark}
+El soporte de $M$ siempre es $S(M) = Y \cap H$. En particular, $\p_1 \dots \p_s$ son los primos minimales de $M$. Sin embargo, $M$ no es siempre el anillo de coordenadas homogéneo de $Y \cap H$.
+\end{remark}
+
+\begin{definition}
+La \textit{multiplicidad} de $Y \cap H$ sobre $Z_j$ es la longitud de $M_{\p_j}$ como $R_{\p_j}$-módulo.
+\end{definition}
+
+\begin{remark}
+Entonces, los primos minimales de $M$, contados con multiplicidad, corresponden a las componentes irreducibles de $Y \cap H$, contadas con multiplicidad.
+\end{remark}
+
+\begin{theorem}
+(Generalización del teorema de Bézout) Sea $Y \subset \P^n$ una variedad proyectiva de dimensión $\dim Y > 0$. Sea $H \subset \P^n$ una hipersuperficie que no contiene a $Y$. Sean $Z_1 \dots Z_s \subset \P^n$ las componentes irreducibles de $Y \cap H$. Entonces,
+$$\mu_1 \cdot \deg Z_1 + \dots + \mu_s \cdot \deg Z_s = \deg Y \cdot \deg H$$
+donde $\mu_j$ es la multiplicidad de $Y \cap H$ sobre $Z_j$
+\end{theorem}
+
+\begin{proof}
+Sea $f \in R$ un generador de $I_H$. Entonces $f$ no es divisor de cero en $R_Y = R/I_Y$. Por los corolarios 3.4 y 3.9, el anillo $M$ tiene dimensión $d = \dim M = \dim Y - 1$ y grado
+$$\deg M = \deg \frac R {I_Y + I_H} = \deg \frac {R_Y} {f R_Y} = \deg Y \cdot \deg H$$
+
+Por la proposición 3.13, $M$ admite una filtración limpia
+$$0 = M^{(0)} \subset M^{(1)} \subset \dots \subset M^{(r)} = M$$
+
+Escribamos el polinomio de Hilbert de $Q^{(i)} = M^{(i)} / M^{(i-1)}$ como $[c_0^{(i)}; \dots; c_d^{(i)}]$. Puesto que el polinomio de Hilbert es aditivo, $M$ tiene grado $\deg M = c_0^{(1)} + \dots + c_0^{(r)}$.
+
+Por el teorema de la dimensión proyectiva, todas las las componentes irreducibles $Z_j$ tienen dimensión $d = \dim Z_j = \dim R/\p_j$. Entonces $c_i^{(0)} \ne 0$ si y sólo si $Q^{(i)}$ es una copia torcida de uno de los cocientes $R/\p_j$, en cuyo caso $c_0^{(i)} = \deg Q^{(i)} = \deg R/\p_j = \deg Z_j$.
+
+Finalmente, por la proposición 3.14, el número de copias torcidas de $R/\p_j$ entre los cocientes de la filtración es precisamente la multiplicidad de $Z$ sobre $Z_j$. Entonces
+$$\deg M = \mu_1 \cdot \deg Z_1 + \dots + \mu_s \cdot \deg Z_s$$
+
+Comparando con la primera expresión para $\deg M$, tenemos el resultado buscado.
+\end{proof}
+
+\begin{corollary}
+(Bézout) Sean $F, G \subset \P^2$ dos curvas proyectivas planas que no tienen componentes irreducibles en común. Sean $p_1 \dots p_s \in \P^2$ los puntos de $F \cap G$. Entonces,
+$$\mu_1 + \dots + \mu_s = \deg F \cdot \deg G$$
+donde $\mu_j$ es la multiplicidad de $F \cap G$ sobre $p_j$.
+\end{corollary}
+
+\begin{proof}
+En el teorema anterior, pongamos $Y = F$, $H = G$, $Z_j = p_j$, $\deg Z_j = \deg p_j = 1$.
+\end{proof}

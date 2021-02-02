@@ -1,0 +1,84 @@
+\section{Polinomio característico}
+
+\noindent La referencia para esta sección es \cite[pp. 118-120]{atiyah}.
+
+\begin{preliminaries}
+Sean $R$ un anillo local noetheriano, $\m \subset R$ su ideal maximal y $\q \subset R$ un ideal de parámetros. Sea $M$ un $R$-módulo finitamente generado con una $\q$-filtración estable.
+\end{preliminaries}
+
+\begin{proposition}
+Los cocientes $M/M_n$ tienen longitud finita.
+\end{proposition}
+
+\begin{proof}
+Puesto que $\q$ es $\m$-primario, $R/\q$ es un anillo local artiniano. Entonces cada $M_n / M_{n+1}$ tiene longitud finita. Por aditividad, cada $M/M_n$ también tiene longitud finita.
+\end{proof}
+
+\begin{proposition}
+Existe un polinomio $\chi^M \in \Q[n]$ tal que $\ell(M/M_n) = \chi^M(n)$ para todo $n \gg 0$. Además, si $x_1 \dots x_s$ generan a $\q$, entonces $\deg \chi^M \le s$.
+\end{proposition}
+
+\begin{proof}
+Por construcción, $G(R)$ es el $R/\q$-álgebra generado por las clases de $x_1 \dots x_s$ módulo $\q^2$. Cada clase $\bar x_i$ tiene grado $\deg \bar x_i = 1$. Por ende, $G(M)$ tiene un polinomio de Hilbert $P_M \in \Q[n]$ con respecto a $\ell$. Sea $r \in \N$ el instante a partir del cual $\ell(M_n / M_{n+1}) = P_M(n)$. Entonces,
+$$\chi^M(n) = \ell(M/M_r) + P_M(r) + \dots + P_M(n-1)$$
+
+Por construcción, $\deg P_M < s$. Entonces, $\deg \chi^M = \deg P_M + 1 \le s$.
+\end{proof}
+
+\begin{definition}
+El polinomio $\chi^M$ de la proposición anterior se llama \textit{polinomio característico} de $M$ con respecto a la filtración $(M_n)$.
+\end{definition}
+
+\begin{definition}
+El \textit{polinomio de Hilbert-Samuel} de $M$ respecto a $\q$, denotado $\chi_\q^M$, es el polinomio característico de $M$ con respecto a la $\q$-filtración canónica.
+\end{definition}
+
+\begin{proposition}
+El grado y el coeficiente líder de $\chi^M$ sólo dependen de $M$ y $\q$, no de $(M_n)$.
+\end{proposition}
+
+\begin{proof}
+Sea $r \in \N$ el instante en que $(M_n)$ se estabiliza. Entonces $\chi^M(n+r) \ge \chi_\q^M(n) \ge \chi^M(n)$ para todo $n \gg 0$. Por ende, $\chi_M$ tiene el mismo grado y coeficiente líder que $\chi_\q^M$.
+\end{proof}
+
+\begin{proposition}
+El grado de $\chi^M$ sólo depende de $M$, no de $\q$.
+\end{proposition}
+
+\begin{proof}
+Puesto que $\q$ es $\m$-primario, existe $r \in \N$ tal que $\m \supset \q \supset \m^r$. Entonces $\m^n \supset \q^n \supset \m^{rn}$. Por ende, $\chi_\m^M(n) \le \chi_\q^M(n) \le \chi_\m^M(rn)$. Por ende, $\chi_\q^M$ tiene el mismo grado que $\chi_\m^M$.
+\end{proof}
+
+\begin{definition}
+La \textit{dimensión} de $M$ es la dimensión de $G(M)$, i.e., el grado de $\chi^M$.
+\end{definition}
+
+\begin{definition}
+La \textit{multiplicidad} de $M$ sobre $\q$ es el grado de $G(M)$.
+\end{definition}
+
+\begin{corollary}
+Supongamos que $s \in \N$ es el menor número de elementos que generan un ideal $\m$-primario. Entonces $M$ tiene dimensión $\dim M \le s$.
+\end{corollary}
+
+\begin{proof}
+Es consecuencia inmediata de las tres proposiciones anteriores.
+\end{proof}
+
+\begin{proposition}
+Sea $x \in R$ un elemento que no es divisor de cero en $M$. Si $M$ tiene dimensión no negativa, entonces $N = M/xM$ tiene dimensión $\dim N < \dim M$.
+\end{proposition}
+
+\begin{proof}
+Equipemos a $M, N$ con las filtraciones canónicas y a $L = xM$ con la filtración inducida por la inclusión en $M$. Entonces tenemos la sucesión exacta filtrada
+$$
+\begin{tikzcd}
+    0 \arrow[r] & L \arrow[r] & M \arrow[r] & N \arrow[r] & 0
+\end{tikzcd}
+$$
+
+Puesto que $x$ no es divisor de cero, $L$ es isomorfo a $M$ como $R$-módulo. Además, por el lema de Artin-Rees, la $\q$-filtración de $L$ es estable. Entonces $L, M$ tienen filtraciones equivalentes. Por ende, $\chi^L$ tiene el mismo grado y coeficiente líder que $\chi^M$. Entonces,
+$$\chi^N = \chi^M - \chi^L = [c_0; c_1; \dots; c_r] - [c_0; c_1'; \dots; c_r']$$
+
+Los términos líderes de $\chi^L$, $\chi^M$ se anulan mutuamente. Por ende, $\deg \chi^N < \deg \chi^M$.
+\end{proof}
